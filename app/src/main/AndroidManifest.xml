@@ -11,15 +11,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".ButtonAlignActivity" />
-        <activity android:name=".PrintStarActivity">
-        </activity>
+        <activity android:name=".PrintStarActivity" />
         <activity android:name=".ButtonLineActivity">
+        </activity>
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OneActivity" />
+        <activity android:name=".TwoActivity"></activity>
     </application>
 
 </manifest>
