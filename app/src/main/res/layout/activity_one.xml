@@ -5,10 +5,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OneActivity">
+    tools:context=".OneActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="계산기"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="120dp">
+        <EditText style="@style/one_edit"
+            android:maxLength="4"
+            android:id="@+id/first_no" />
+        <TextView style="@style/OA_top_between"
+            android:id="@+id/calc" />
+        <EditText style="@style/one_edit"
+            android:id="@+id/second_no"
+            android:maxLength="4"
+            />
+        <TextView style="@style/OA_top_between"
+            android:text="="/>
+
+        <TextView style="@style/one_edit"
+            android:id="@+id/answer"
+            android:maxLength="15"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:orientation="vertical">
+           <LinearLayout style="@style/no_btn_group">
+               <Button style="@style/no_btn"
+                   android:text="7"/>
+               <Button style="@style/no_btn"
+                   android:text="8"/>
+               <Button style="@style/no_btn"
+                   android:text="9"/>
+           </LinearLayout>
+           <LinearLayout style="@style/no_btn_group">
+               <Button style="@style/no_btn"
+                   android:text="4"/>
+               <Button style="@style/no_btn"
+                   android:text="5"/>
+               <Button style="@style/no_btn"
+                   android:text="6"/>
+           </LinearLayout>
+           <LinearLayout style="@style/no_btn_group">
+               <Button style="@style/no_btn"
+                   android:text="1"/>
+               <Button style="@style/no_btn"
+                   android:text="2"/>
+               <Button style="@style/no_btn"
+                   android:text="3"/>
+           </LinearLayout>
+           <LinearLayout style="@style/no_btn_group">
+               <Button style="@style/no_btn"
+                   android:text="0"/>
+               <Button style="@style/no_btn"
+                   android:id="@+id/equal"
+                   android:layout_weight="2"
+                   android:text="="/>
+           </LinearLayout>
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button style="@style/calc_btn"
+                android:text="C"
+                />
+            <Button style="@style/calc_btn"
+                android:text="+"
+                />
+            <Button style="@style/calc_btn"
+                android:text="-"
+                />
+            <Button style="@style/calc_btn"
+                android:text="*"
+                />
+            <Button style="@style/calc_btn"
+                android:text="/"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
